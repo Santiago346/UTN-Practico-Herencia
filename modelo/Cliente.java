@@ -1,0 +1,105 @@
+package modelo;
+import java.time.LocalDate;
+
+public abstract class Cliente {
+
+    protected int id;
+    protected String nombre;
+    protected String apellidoOrazonSocial;
+    protected String documentoOCuit;
+    protected String direccion;
+    protected String telefono;
+    protected String correoElectronico;
+    protected LocalDate fechaAlta;
+
+    public Cliente() {
+    }
+
+    public Cliente(int id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
+            String direccion, String telefono, String correoElectronico, LocalDate fechaAlta) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellidoOrazonSocial = apellidoOrazonSocial;
+        this.documentoOCuit = documentoOCuit;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.correoElectronico = correoElectronico;
+        this.fechaAlta = fechaAlta;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellidoOrazonSocial(String apellidoOrazonSocial) {
+        this.apellidoOrazonSocial = apellidoOrazonSocial;
+    }
+
+    public void setDocumentoOCuit(String documentoOCuit) {
+        this.documentoOCuit = documentoOCuit;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public void setFechaAlta(LocalDate fechaAlta) {
+        this.fechaAlta = fechaAlta;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellidoOrazonSocial() {
+        return apellidoOrazonSocial;
+    }
+
+    public String getDocumentoOCuit() {
+        return documentoOCuit;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public LocalDate getFechaAlta() {
+        return fechaAlta;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+                "Nombre: " + nombre +
+                "Apellido/Razón Social: " + apellidoOrazonSocial +
+                "Documento/CUIT: " + documentoOCuit +
+                "Dirección: " + direccion +
+                "Teléfono: " + telefono +
+                "Email: " + correoElectronico +
+                "Fecha Alta: " + fechaAlta;
+    }
+}
