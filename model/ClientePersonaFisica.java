@@ -1,17 +1,15 @@
 package model;
 
-import java.time.LocalDate;
-
 public class ClientePersonaFisica extends Cliente {
 
     private String dni;
-    private LocalDate fechaNacimiento;
+    private String fechaNacimiento;
     private String profesion;
-    private double ingresosDeclarados;
+    private Integer ingresosDeclarados;
 
     public ClientePersonaFisica(int id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
-            String direccion, String telefono, String correoElectronico, LocalDate fechaAlta,
-            String dni, LocalDate fechaNacimiento, String profesion, double ingresosDeclarados) {
+            String direccion, String telefono, String correoElectronico, String fechaAlta,
+            String dni, String fechaNacimiento, String profesion, Integer ingresosDeclarados) {
 
         super(id, nombre, apellidoOrazonSocial, documentoOCuit, direccion, telefono, correoElectronico, fechaAlta);
 
@@ -25,7 +23,7 @@ public class ClientePersonaFisica extends Cliente {
         return dni;
     }
 
-    public LocalDate getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
@@ -33,7 +31,7 @@ public class ClientePersonaFisica extends Cliente {
         return profesion;
     }
 
-    public double getIngresosDeclarados() {
+    public Integer getIngresosDeclarados() {
         return ingresosDeclarados;
     }
 
@@ -41,7 +39,7 @@ public class ClientePersonaFisica extends Cliente {
         this.dni = dni;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -49,7 +47,7 @@ public class ClientePersonaFisica extends Cliente {
         this.profesion = profesion;
     }
 
-    public void setIngresosDeclarados(double ingresosDeclarados) {
+    public void setIngresosDeclarados(Integer ingresosDeclarados) {
         this.ingresosDeclarados = ingresosDeclarados;
     }
 

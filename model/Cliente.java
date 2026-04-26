@@ -1,7 +1,5 @@
 package model;
 
-import java.time.LocalDate;
-
 public abstract class Cliente implements Calificable {
 
     protected int id;
@@ -11,13 +9,13 @@ public abstract class Cliente implements Calificable {
     protected String direccion;
     protected String telefono;
     protected String correoElectronico;
-    protected LocalDate fechaAlta;
+    protected String fechaAlta;
 
     public Cliente() {
     }
 
     public Cliente(int id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
-            String direccion, String telefono, String correoElectronico, LocalDate fechaAlta) {
+            String direccion, String telefono, String correoElectronico, String fechaAlta) {
         this.id = id;
         this.nombre = nombre;
         this.apellidoOrazonSocial = apellidoOrazonSocial;
@@ -60,7 +58,7 @@ public abstract class Cliente implements Calificable {
         this.correoElectronico = correoElectronico;
     }
 
-    public void setFechaAlta(LocalDate fechaAlta) {
+    public void setFechaAlta(String fechaAlta) {
         this.fechaAlta = fechaAlta;
     }
 
@@ -88,7 +86,7 @@ public abstract class Cliente implements Calificable {
         return correoElectronico;
     }
 
-    public LocalDate getFechaAlta() {
+    public String getFechaAlta() {
         return fechaAlta;
     }
 

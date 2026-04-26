@@ -8,7 +8,7 @@ public class ClienteEmpresa extends Cliente {
     private String representanteLegal;
 
     public ClienteEmpresa(int id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
-            String direccion, String telefono, String correoElectronico, java.time.LocalDate fechaAlta,
+            String direccion, String telefono, String correoElectronico, String fechaAlta,
             String razonSocial, String cuit, String rubro, String representanteLegal) {
 
         super(id, nombre, apellidoOrazonSocial, documentoOCuit, direccion, telefono, correoElectronico, fechaAlta);

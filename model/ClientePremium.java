@@ -2,13 +2,13 @@ package model;
 
 public class ClientePremium extends Cliente {
 
-    private double limiteCreditoEspecial;
+    private Integer limiteCreditoEspecial;
     private String ejecutivoCuenta;
     private String beneficiosAdicionales;
 
-    public ClientePremium(int id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
-            String direccion, String telefono, String correoElectronico, java.time.LocalDate fechaAlta,
-            double limiteCreditoEspecial, String ejecutivoCuenta, String beneficiosAdicionales) {
+    public ClientePremium(Integer id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
+            String direccion, String telefono, String correoElectronico, String fechaAlta,
+            Integer limiteCreditoEspecial, String ejecutivoCuenta, String beneficiosAdicionales) {
 
         super(id, nombre, apellidoOrazonSocial, documentoOCuit, direccion, telefono, correoElectronico, fechaAlta);
 
@@ -17,7 +17,7 @@ public class ClientePremium extends Cliente {
         this.beneficiosAdicionales = beneficiosAdicionales;
     }
 
-    public double getLimiteCreditoEspecial() {
+    public Integer getLimiteCreditoEspecial() {
         return limiteCreditoEspecial;
     }
 
@@ -29,7 +29,7 @@ public class ClientePremium extends Cliente {
         return beneficiosAdicionales;
     }
 
-    public void setLimiteCreditoEspecial(double limiteCreditoEspecial) {
+    public void setLimiteCreditoEspecial(Integer limiteCreditoEspecial) {
         this.limiteCreditoEspecial = limiteCreditoEspecial;
     }
 

@@ -1,5 +1,4 @@
 package app;
-import java.time.LocalDate;
 
 import model.ClienteEmpresa;
 import model.ClientePersonaFisica;
@@ -7,59 +6,59 @@ import model.ClientePremium;
 
 public class Main {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-        ClientePersonaFisica cliente1 = new ClientePersonaFisica(
-                1,
-                "Juan",
-                "Pérez",
-                "12345678",
-                "Calle Falsa 123",
-                "1122334455",
-                "juan@gmail.com",
-                LocalDate.now(),
-                "12345678",
-                LocalDate.of(1990, 5, 10),
-                "Ingeniero",
-                250000.50);
+                ClientePersonaFisica cliente1 = new ClientePersonaFisica(
+                                1,
+                                "Juan",
+                                "Pérez",
+                                "12345678",
+                                "Calle Falsa 123",
+                                "1122334455",
+                                "juan@gmail.com",
+                                "10/05/2010",
+                                "12345678",
+                                "10/05/1990",
+                                "Ingeniero",
+                                250000);
 
-        ClienteEmpresa cliente2 = new ClienteEmpresa(
-                2,
-                "Empresa SA",
-                "Empresa SA",
-                "30-12345678-9",
-                "Av. Siempre Viva 742",
-                "1144556677",
-                "contacto@empresa.com",
-                LocalDate.now(),
-                "Empresa SA",
-                "30-12345678-9",
-                "Tecnología",
-                "Carlos Gómez");
+                ClienteEmpresa cliente2 = new ClienteEmpresa(
+                                2,
+                                "Empresa SA",
+                                "Empresa SA",
+                                "30-12345678-9",
+                                "Av. Siempre Viva 742",
+                                "1144556677",
+                                "contacto@empresa.com",
+                                "10/05/2010",
+                                "Empresa SA",
+                                "30-12345678-9",
+                                "Tecnología",
+                                "Carlos Gómez");
 
-        ClientePremium cliente3 = new ClientePremium(
-                3,
-                "Ana",
-                "López",
-                "20333444556",
-                "Av. Libertador 1000",
-                "1199887766",
-                "ana@gmail.com",
-                LocalDate.now(),
-                1000000.0,
-                "Ejecutivo VIP",
-                "Acceso a sala preferencial");
+                ClientePremium cliente3 = new ClientePremium(
+                                3,
+                                "Ana",
+                                "López",
+                                "20333444556",
+                                "Av. Libertador 1000",
+                                "1199887766",
+                                "ana@gmail.com",
+                                "10/05/2010",
+                                1000000,
+                                "Ejecutivo VIP",
+                                "Acceso a sala preferencial");
 
-        System.out.println("CLIENTE PERSONA FÍSICA");
-        System.out.println(cliente1);
-        System.out.println("Calificación: " + cliente1.calcularCalificacion());
+                System.out.println("CLIENTE PERSONA FÍSICA");
+                System.out.println(cliente1);
+                System.out.println("Calificación: " + cliente1.calcularCalificacion());
 
-        System.out.println("CLIENTE EMPRESA");
-        System.out.println(cliente2);
-        System.out.println("Calificación: " + cliente2.calcularCalificacion());
+                System.out.println("CLIENTE EMPRESA");
+                System.out.println(cliente2);
+                System.out.println("Calificación: " + cliente2.calcularCalificacion());
 
-        System.out.println("CLIENTE PREMIUM");
-        System.out.println(cliente3);
-        System.out.println("Calificación: " + cliente3.calcularCalificacion());
-    }
+                System.out.println("CLIENTE PREMIUM");
+                System.out.println(cliente3);
+                System.out.println("Calificación: " + cliente3.calcularCalificacion());
+        }
 }
