@@ -1,4 +1,5 @@
-package modelo;
+package model;
+
 public class ClientePremium extends Cliente {
 
     private double limiteCreditoEspecial;
@@ -43,8 +44,21 @@ public class ClientePremium extends Cliente {
     @Override
     public String toString() {
         return super.toString() +
-                "Límite Crédito: " + limiteCreditoEspecial +
-                "Ejecutivo: " + ejecutivoCuenta +
-                "Beneficios: " + beneficiosAdicionales;
+                "\nLímite Crédito: " + limiteCreditoEspecial +
+                "\nEjecutivo: " + ejecutivoCuenta +
+                "\nBeneficios: " + beneficiosAdicionales;
+    }
+
+    @Override
+    public CalificacionCliente calcularCalificacion() {
+        if (limiteCreditoEspecial < 200000) {
+            return CalificacionCliente.BAJO;
+        } else if (limiteCreditoEspecial < 500000) {
+            return CalificacionCliente.MEDIO;
+        } else if (limiteCreditoEspecial < 1000000) {
+            return CalificacionCliente.ALTO;
+        } else {
+            return CalificacionCliente.AVANZADO;
+        }
     }
 }

@@ -1,9 +1,9 @@
 package app;
 import java.time.LocalDate;
 
-import modelo.ClienteEmpresa;
-import modelo.ClientePersonaFisica;
-import modelo.ClientePremium;
+import model.ClienteEmpresa;
+import model.ClientePersonaFisica;
+import model.ClientePremium;
 
 public class Main {
 
@@ -52,11 +52,14 @@ public class Main {
 
         System.out.println("CLIENTE PERSONA FÍSICA");
         System.out.println(cliente1);
+        System.out.println("Calificación: " + cliente1.calcularCalificacion());
 
         System.out.println("CLIENTE EMPRESA");
         System.out.println(cliente2);
+        System.out.println("Calificación: " + cliente2.calcularCalificacion());
 
         System.out.println("CLIENTE PREMIUM");
         System.out.println(cliente3);
+        System.out.println("Calificación: " + cliente3.calcularCalificacion());
     }
 }

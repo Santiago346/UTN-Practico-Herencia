@@ -1,4 +1,5 @@
-package modelo;
+package model;
+
 import java.time.LocalDate;
 
 public class ClientePersonaFisica extends Cliente {
@@ -55,10 +56,23 @@ public class ClientePersonaFisica extends Cliente {
     @Override
     public String toString() {
         return super.toString() +
-                "DNI: " + dni +
-                "Fecha Nacimiento: " + fechaNacimiento +
-                "Profesión: " + profesion +
-                "Ingresos: " + ingresosDeclarados;
+                "\nDNI: " + dni +
+                "\nFecha Nacimiento: " + fechaNacimiento +
+                "\nProfesión: " + profesion +
+                "\nIngresos: " + ingresosDeclarados;
+    }
+
+    @Override
+    public CalificacionCliente calcularCalificacion() {
+        if (ingresosDeclarados < 100000) {
+            return CalificacionCliente.BAJO;
+        } else if (ingresosDeclarados < 300000) {
+            return CalificacionCliente.MEDIO;
+        } else if (ingresosDeclarados < 700000) {
+            return CalificacionCliente.ALTO;
+        } else {
+            return CalificacionCliente.AVANZADO;
+        }
     }
 
 }
