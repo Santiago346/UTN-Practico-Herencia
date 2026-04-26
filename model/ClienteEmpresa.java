@@ -1,4 +1,5 @@
-package modelo;
+package model;
+
 public class ClienteEmpresa extends Cliente {
 
     private String razonSocial;
@@ -53,9 +54,26 @@ public class ClienteEmpresa extends Cliente {
     @Override
     public String toString() {
         return super.toString() +
-                "Razón Social: " + razonSocial +
-                "CUIT: " + cuit +
-                "Rubro: " + rubro +
-                "Representante Legal: " + representanteLegal;
+                "\nRazón Social: " + razonSocial +
+                "\nCUIT: " + cuit +
+                "\nRubro: " + rubro +
+                "\nRepresentante Legal: " + representanteLegal;
+    }
+
+    @Override
+    public CalificacionCliente calcularCalificacion() {
+        switch (rubro.toLowerCase()) {
+            case "tecnologia":
+                return CalificacionCliente.AVANZADO;
+
+            case "finanzas":
+                return CalificacionCliente.ALTO;
+
+            case "comercio":
+                return CalificacionCliente.MEDIO;
+
+            default:
+                return CalificacionCliente.BAJO;
+        }
     }
 }

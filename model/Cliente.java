@@ -1,7 +1,8 @@
-package modelo;
+package model;
+
 import java.time.LocalDate;
 
-public abstract class Cliente {
+public abstract class Cliente implements Calificable {
 
     protected int id;
     protected String nombre;
@@ -94,12 +95,12 @@ public abstract class Cliente {
     @Override
     public String toString() {
         return "ID: " + id +
-                "Nombre: " + nombre +
-                "Apellido/Razón Social: " + apellidoOrazonSocial +
-                "Documento/CUIT: " + documentoOCuit +
-                "Dirección: " + direccion +
-                "Teléfono: " + telefono +
-                "Email: " + correoElectronico +
-                "Fecha Alta: " + fechaAlta;
+                "\nNombre: " + nombre +
+                "\nApellido/Razón Social: " + apellidoOrazonSocial +
+                "\nDocumento/CUIT: " + documentoOCuit +
+                "\nDirección: " + direccion +
+                "\nTeléfono: " + telefono +
+                "\nEmail: " + correoElectronico +
+                "\nFecha Alta: " + fechaAlta;
     }
 }
