@@ -3,6 +3,7 @@ package app;
 import model.ClienteEmpresa;
 import model.ClientePersonaFisica;
 import model.ClientePremium;
+import model.Rubro;
 import model.Cliente;
 
 public class Main {
@@ -34,7 +35,7 @@ public class Main {
                                 "10/05/2010",
                                 "Empresa SA",
                                 "30-12345678-9",
-                                "Tecnología",
+                                Rubro.COMERCIO,
                                 "Carlos Gómez");
 
                 Cliente cliente3 = new ClientePremium(

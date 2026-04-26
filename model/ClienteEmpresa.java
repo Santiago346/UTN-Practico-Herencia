@@ -4,12 +4,12 @@ public class ClienteEmpresa extends Cliente {
 
     private String razonSocial;
     private String cuit;
-    private String rubro;
+    private Rubro rubro;
     private String representanteLegal;
 
     public ClienteEmpresa(int id, String nombre, String apellidoOrazonSocial, String documentoOCuit,
             String direccion, String telefono, String correoElectronico, String fechaAlta,
-            String razonSocial, String cuit, String rubro, String representanteLegal) {
+            String razonSocial, String cuit, Rubro rubro, String representanteLegal) {
 
         super(id, nombre, apellidoOrazonSocial, documentoOCuit, direccion, telefono, correoElectronico, fechaAlta);
 
@@ -27,7 +27,7 @@ public class ClienteEmpresa extends Cliente {
         return cuit;
     }
 
-    public String getRubro() {
+    public Rubro getRubro() {
         return rubro;
     }
 
@@ -43,7 +43,7 @@ public class ClienteEmpresa extends Cliente {
         this.cuit = cuit;
     }
 
-    public void setRubro(String rubro) {
+    public void setRubro(Rubro rubro) {
         this.rubro = rubro;
     }
 
@@ -62,14 +62,14 @@ public class ClienteEmpresa extends Cliente {
 
     @Override
     public CalificacionCliente calcularCalificacion() {
-        switch (rubro.toLowerCase()) {
-            case "tecnologia":
+        switch (this.rubro) {
+            case TECNOLOGIA :
                 return CalificacionCliente.AVANZADO;
 
-            case "finanzas":
+            case FINANZAS:
                 return CalificacionCliente.ALTO;
 
-            case "comercio":
+            case COMERCIO:
                 return CalificacionCliente.MEDIO;
 
             default:
