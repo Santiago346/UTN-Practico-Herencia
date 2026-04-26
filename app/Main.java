@@ -3,12 +3,13 @@ package app;
 import model.ClienteEmpresa;
 import model.ClientePersonaFisica;
 import model.ClientePremium;
+import model.Cliente;
 
 public class Main {
 
         public static void main(String[] args) {
 
-                ClientePersonaFisica cliente1 = new ClientePersonaFisica(
+                Cliente cliente1 = new ClientePersonaFisica(
                                 1,
                                 "Juan",
                                 "Pérez",
@@ -22,7 +23,7 @@ public class Main {
                                 "Ingeniero",
                                 250000);
 
-                ClienteEmpresa cliente2 = new ClienteEmpresa(
+                Cliente cliente2 = new ClienteEmpresa(
                                 2,
                                 "Empresa SA",
                                 "Empresa SA",
@@ -36,7 +37,7 @@ public class Main {
                                 "Tecnología",
                                 "Carlos Gómez");
 
-                ClientePremium cliente3 = new ClientePremium(
+                Cliente cliente3 = new ClientePremium(
                                 3,
                                 "Ana",
                                 "López",
